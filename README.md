@@ -6,16 +6,15 @@ Quillcraft is a dynamic and feature-rich blog application built using the **MERN
 
 - **User Authentication**:
   - Secure login and signup functionality.
-  - Social login options using Google and Facebook OAuth.
 - **Blog Management**:
   - Create, edit, and delete blog posts.
   - View detailed blog content with an optimized layout.
 - **Rich Text Editing**:
   - A WYSIWYG editor to format blog content seamlessly.
-- **Category & Tag Management**:
-  - Organize blogs with categories and tags for better navigation.
-- **Search & Filter**:
-  - Easily search for blogs using keywords, categories, or tags.
+- **Comments and Likes**:
+  - Allow users to comment on and like blog posts.
+- **Bookmarking**:
+  - Users can bookmark blogs to revisit later.
 - **Responsive Design**:
   - Built with **Tailwind CSS**, ensuring a modern and mobile-friendly experience.
 - **SEO-Friendly**:
@@ -46,12 +45,35 @@ Follow these steps to run Quillcraft locally:
      ```
      cd Backend
      npm install
-    ```
+     
    - For the client:
     ```
     cd Frontend
     npm install
+    
+3. **Set Up Environment Variables:**
+  - Create a .env file in the server directory and add the following:
     ```
+    PORT 
+    MONGODB_URI
+    CORS_ORIGIN 
+    ACCESS_TOKEN_SECRET 
+    ACCESS_TOKEN_EXPIRY
+    REFRESH_TOKEN_SECRET
+    REFRESH_TOKEN_EXPIRY
+    CLOUDINARY_API_SECRET
+    CLOUDINARY_API_KEY
+    CLOUDINARY_CLOUD_NAME
+  
+4. **Set Up Environment Variables:**
 
+   - Start the server:
+     ```
+     cd Backend
+     npm run dev
 
+- Start the client:
+     ```
+     cd Frontend
+     npm run dev
 
