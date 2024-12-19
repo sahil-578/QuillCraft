@@ -1,75 +1,57 @@
-#QuillCraft
+# Quillcraft 📝✨
 
-<div className="flex flex-row">
-    
-    {/* LOGO DIV */}
-    
-          <div className="flex flex-row p-4 ml-8 mt-4">
+Quillcraft is a dynamic and feature-rich blog application built using the **MERN stack** (MongoDB, Express.js, React.js, and Node.js). It enables users to create, manage, and share blog posts with a user-friendly interface while supporting complete CRUD (Create, Read, Update, Delete) operations.
 
-              <p className="text-[30px] text-[#F1D4D4] font-semibold ">Quill </p>
-              
-              <p className="text-[30px] font-['Pacifico'] text-transparent bg-clip-text bg-gradient-to-r from-[#F1D4D4] via-[#C060A1] to-[#8c14a4]">
-                  Craft.
-              </p>
+## Features ✨
 
-          </div>
+- **User Authentication**:
+  - Secure login and signup functionality.
+  - Social login options using Google and Facebook OAuth.
+- **Blog Management**:
+  - Create, edit, and delete blog posts.
+  - View detailed blog content with an optimized layout.
+- **Rich Text Editing**:
+  - A WYSIWYG editor to format blog content seamlessly.
+- **Category & Tag Management**:
+  - Organize blogs with categories and tags for better navigation.
+- **Search & Filter**:
+  - Easily search for blogs using keywords, categories, or tags.
+- **Responsive Design**:
+  - Built with **Tailwind CSS**, ensuring a modern and mobile-friendly experience.
+- **SEO-Friendly**:
+  - Structured data and meta tags to improve discoverability on search engines.
 
-      </div>
+## Tech Stack 🛠️
+
+- **Frontend**: React.js with Context API/Redux for state management.
+- **Backend**: Node.js and Express.js.
+- **Database**: MongoDB with Mongoose for efficient data modeling.
+
+## Installation & Setup 🚀
+
+Follow these steps to run Quillcraft locally:
+
+### Prerequisites:
+- Node.js (v14 or later)
+- MongoDB (local or cloud instance)
+
+### Steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/sahil-578/QuillCraft.git
+   ```
+2. **Install Dependencies:**
+   - For the server:
+     ```
+     cd Backend
+     npm install
+    ```
+   - For the client:
+    ```
+    cd Frontend
+    npm install
+    ```
 
 
-# FORM DATA
 
-const getdata = (e) => {
-    e.preventDefault();
-    ;(async() => {
-
-      const formData = new FormData()
-      formData.append('avatar', file)
-      formData.append('fullname', fullname)
-      formData.append('username', username)
-      formData.append('email', email)
-      formData.append('password', password)
-
-      const response = await axios.post('/api/v1/user/register', formData);
-
-      console.log(response);
-
-    })();
-    
-}
-
-<form onSubmit={getdata}>
-
-          <input type="text" onChange={(e) => setFullname(e.target.value)} value={fullname}></input>
-          <input type="text" onChange={(e) => setUsername(e.target.value)} value={username}></input>
-          <input type="text" onChange={(e) => setEmail(e.target.value)} value={email}></input>
-          <input type="text" onChange={(e) => setPassword(e.target.value)} value={password}></input>
-          <input type="file" onChange={(e) => setFile(e.target.files[0])}></input>
-          <button >Click</button>
-
-        </form>
-
-<!-- LIkE and Bookmark button on blog page -->
-
-<div className='border-2 p-4 flex '>
-        <div className='p-2 w-fit'>
-          <button className='flex pt-2 pb-2 pl-4 pr-4 rounded-lg shadow-[0px_0px_10px_5px_rgba(0,0,0,.5)] hover:shadow-[0px_0px_10px_5px_rgba(0,0,0,.3)] transition-all ease-in-out duration-500'>
-            <div className={`stroke-[#ff0000] stroke-2 ${like ? 'fill-[#ff0000] ' : 'fill-none'}`}>
-              <Like />
-            </div>
-            <span className='tracking-widest text-[0.94rem] ml-2 '>
-              {likesCount}
-            </span>
-          </button>
-
-        </div>
-
-        <div className='p-2 w-fit'>
-          <button className='flex p-2 rounded-lg shadow-[0px_0px_10px_5px_rgba(0,0,0,.5)] hover:shadow-[0px_0px_10px_5px_rgba(0,0,0,.3)] transition-all ease-in-out duration-500'>
-            <div className={`stroke-[#ffff00] stroke-2 ${like ? 'fill-[#ffff00] ' : 'fill-none'}`}>
-              <Star />
-            </div>
-          </button>
-
-        </div>
-      </div>
