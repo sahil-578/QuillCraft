@@ -77,3 +77,8 @@ Follow these steps to run Quillcraft locally:
      cd Frontend
      npm run dev
 
+**Video Demonstration**
+
+- Here’s a video demonstrating how to use the application:
+
+https://github.com/user-attachments/assets/27cb31ad-e70d-481e-a224-39c5db10511c
